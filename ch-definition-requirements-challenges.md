@@ -13,7 +13,7 @@ myappmaker is an app maker tool consisting of a graphical application that relie
 
 In addition to that, its block coding interface should be able to take advantage of Python and its many libraries.
 
-Why another app builder? Because even though many other app builder software exist today, regardless of their ease-of-use and how intuitive they are for users, they present many crucial limitations. First of all, many of them are commercial/paid software, which, despite not being a problem per se, prevents access to the tool by many people who can't afford the prices. They also are often made available only as web/cloud or mobile apps. On top of leaving users overly dependent on such platforms, this also prevents people from taking advantage of their plenty capable, often faster, computers. A standalone desktop app would give users much more freedom and performance.
+Why another app builder? Because even though many other app builder software applications exist today, regardless of their ease-of-use and how intuitive they are for users, they present many crucial limitations. First of all, many of them are commercial/paid software, which, despite not being a problem per se, prevents access to the tool by many people who can't afford the prices. They also are often made available only as web/cloud or mobile apps. On top of leaving users overly dependent on such platforms, this also prevents people from taking advantage of their plenty capable, often faster, computers. A standalone desktop app would give users much more freedom and performance.
 
 Just like any software under the Indie Python project, myappmaker would also be 100% free, open-source and not in control of any organization that could pull it away from users.
 
@@ -38,11 +38,11 @@ Initial list of requirements:
   - METAPOST (consider as a possible model or reference) --- there isn't a graphical tool for this, and it is incredibly powerful, and if there was a graphical editor which used .mp as its/a source format that would be incredibly powerful (it is possible, or even likely that METAPOST support would be something done in a reference implementation/example program/standard library)
   - Bézier curve support (pretty much a requirement for SVG) --- these allow drawing essentially anything, and including them as an object/element type would ensure pretty much anything anyone could envision could be drawn
   - simple drawing/editing of vectors --- one example of an elegant and user-friendly user interfrace for this is Futurewave Smartsketch/Flash. Interestingly, this drawing tool became an animation/scripting solution, so arguably one description of this project might be "Flash successor" --- note that there is an opensource tool which is implementing this drawing model: https://www.wickeditor.com/#/
-- accessibility --- the ideal, would be something like to https://beeware.org/project/projects/libraries/toga/ since it uses native objects on each platform, but this tool should be important enough to folks who want something like it that giving up accessibility would be an acceptable trade-off, (naturally, if this is the case it will be made clear as a limitation up-front
+- accessibility --- the ideal, would be something like to https://beeware.org/project/projects/libraries/toga/ since it uses native objects on each platform, but this tool should be important enough to folks who want something like it that giving up accessibility would be an acceptable trade-off, (naturally, if this is the case it will be made clear as a limitation up-front)
 - possibility of running on either Chrome OS or Android (or even iPad?) --- there are a lot of school systems which provide such to students and being able to offer an option for education, esp. if it would be possible to set up a support system for schools could be _huge_
 - Raspberry Pi --- the new 5 seems an incredible value, and there is a nifty new tablet version of it which raises one kind of wild possibility:
-  - LCARS --- "Library Computer Access and Retrieval System", this is the computer "interface" shown on _Star Trek: The Next Generation_ and later shows --- having this GUI toolkit as a potential development platform would be a great way to differentiate this project, and possibly generate a lot of interest, and harvest a lot of potential energy and development fervor (the Raspberry Pi 5 tablet in question is the Pilet: https://soulscircuit.com/pilet )
-- Themes --- note that the LCARS interface as a development target would beone of multiple (if possible) GUI toolkits which are supported
+  - LCARS --- "Library Computer Access and Retrieval System", this is the computer "interface" shown on _Star Trek: The Next Generation_ and later shows --- having this GUI toolkit as a potential development target/platform would be a great way to differentiate this project, and possibly generate a lot of interest, and harvest a lot of potential energy and development fervor (the Raspberry Pi 5 tablet in question is the Pilet: https://soulscircuit.com/pilet )
+- Themes --- note that the LCARS interface as a development target would be one of multiple (if possible) GUI toolkits which are supported and would of course be secondary to the default QT appearance
 
 Additional thoughts and considerations (originally from a private e-mail):
 
@@ -53,13 +53,13 @@ https://raw.githubusercontent.com/shapeoko/Docs/1c2ceb2f7fca11a4895ef3aeddd9d039
 
 (from the instructions for the Shapeoko 2 CNC machine)
 
-At the time of their creation  allowed clicking on the parts list which would then highlight the matching parts in the diagram --- presumably if javascript interactivity were enabled in a modern browser they would still work.
+At the time of their creation they allowed clicking on the parts list at the right of the drawing which would then highlight the matching parts in the diagram --- presumably if javascript interactivity were enabled in a modern browser they would still work.
 
-Possible output formats are pretty obvious --- compiling to HTML or SVG with Javascript would be the easiest deployment, but technically complex, writing out a stand-alone .py file would be a welcome option but may only work for a simplistic subset of the application's capabilities, and as noted elsewhere the native fileformat will be a .zip archive with identifying file extension which the development environment would be able to "play".
+Possible output formats are pretty obvious --- compiling to HTML or SVG with Javascript would be the a simple and potentially widespread deployment, but architecturarlly technically complex, writing out a stand-alone .py file would be a welcome option but may only work for a simplistic subset of the application's capabilities, and as noted elsewhere the native fileformat will be a .zip archive with identifying file extension which the development environment would be able to "play".
 
 A basic workflow/set of functions:
  
-- visually layout the window of a program
+- visually layout/drawing of the window of a program
 - interactively select elements of the program and code up behaviours and functionality
 - compile/export the program into some sort of file which could then be uploaded to GitHub (along with the source) and from there either run (say HTML web page w/ Javascript on a Github.io linked page) or to a .py file (with additional resources), or some sort of compiled file w/ runtime if need be
 
@@ -71,7 +71,7 @@ The requirements related to mobile/browser support were later deemed as nice-to-
 
 Of course there are ways to integrate Python into these environments. However, what we worry about is whether the current capabilities of those mobile solutions meet the needs of this project, which is already complex enough even for desktop.
 
-In our conversations, Mr. Adams also mentioned Godot and gdscript as technologies he's been keeping an eye out for, given its wide range of applications, like its usage for UI programming in screens from Tesla vehicles. Despite being a game engine and not an app builder, Godot's versatility sets it as a great inspiration for app builder projects. As a matter of fact, not being in the category of app builder software doesn't make Godot any less suitable for app making. In fact, many business and developers use it to develop all kinds of applications, like [Pixelorama](https://github.com/Orama-Interactive/Pixelorama), for instance.
+In conversations, Godot and gdscript were mentioned as technologies of potential interest given its wide range of applications, such as its usage for UI programming in screens for Tesla vehicles. Despite being a game engine and not an app builder, Godot's versatility sets it as a great inspiration for app builder projects. As a matter of fact, not being in the category of app builder software doesn't make Godot any less suitable for app making. In fact, many business and developers use it to develop all kinds of applications, like [Pixelorama](https://github.com/Orama-Interactive/Pixelorama), for instance.
 
 Note for a drawing program, hand-drawn appearances are pleasing, popular and helpful for representing UI, with a hand-drawn appearance often noted as an aid to discussing UI mockups:
  
@@ -81,7 +81,7 @@ It may be that some sort of ability to "theme" drawings or change the appearance
  
 https://www.pcmag.com/archive/creature-house-expression-3-161253
 
-where it was possible to select a stroke/curve/geometric shape/outline and assign to it a visual appearance/skin which could then be changed.
+where it was possible to select a stroke/curve/geometric shape/outline and assign to it a visual appearance/skin which could then be changed. It might be that an initial "stroke" or drawing of an element while potentially recognized or represented internally as a perfect shape or widget might have its appearance preserved as a selectable representation.
 
 ## myappmaker design challenges
 
